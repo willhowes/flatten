@@ -13,4 +13,7 @@ describe("#flatten", () => {
   it("correctly handles a sub array within an array argument", () => {
     expect(flatten([1, [2, 3]])).toEqual([1, 2, 3]);
   });
+  it("correctly handles a subSub array within an array argument", () => {
+    expect(flatten([1, [2, [3]]])).toEqual([1, 2, 3]);
+  });
 });
