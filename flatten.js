@@ -1,15 +1,14 @@
 const flatten = (...inputArguments) => {
-  returningArray = [];
-  inputArguments.forEach(item => {
-    if (Array.isArray(item)) {
-      item.forEach(subItem => {
-        returningArray.push(subItem);
-      });
+  let i = 0;
+
+  while (i < inputArguments.length) {
+    if (Array.isArray(inputArguments[i])) {
+      inputArguments.splice(i, 1, ...inputArguments[i]);
     } else {
-      returningArray.push(item);
+      i++;
     }
-  });
-  return returningArray;
+  }
+  return inputArguments;
 };
 
 module.exports = flatten;
