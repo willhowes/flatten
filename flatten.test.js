@@ -4,4 +4,7 @@ describe("#flatten", () => {
   it("turns one argument into an array", () => {
     expect(flatten(1)).toEqual([1]);
   });
+  it("turns two arguments into an array", () => {
+    expect(flatten(1, 2)).toEqual([1, 2]);
+  });
 });

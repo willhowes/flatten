@@ -1,6 +1,8 @@
-const flatten = input => {
+const flatten = (...inputArguments) => {
   returningArray = [];
-  returningArray.push(input);
+  inputArguments.forEach(item => {
+    returningArray.push(item);
+  });
   return returningArray;
 };
 
